@@ -9,7 +9,7 @@ import { ReactComponent as Twitter } from "../assets/icones/twitter.svg";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-bgLight lg:flex lg:space-x-32">
+      <footer className="bg-bgLight lg:flex lg:space-x-32 mt-32">
         <div className="lg:pl-24 py-8 basis-1/5 px-4">
           <div className="flex space-x-2 items-center">
             <Logo className="w-[56px] h-[56px] fill-bgDark" />

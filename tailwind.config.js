@@ -6,6 +6,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "home-section": "url('../assets/images/bergerallemand.jpg')",
+      },
       colors: {
         whiteText: "#F5F5F5",
         blackText: "#1D242D",

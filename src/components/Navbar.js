@@ -7,7 +7,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <header className="max-w-full mx-auto sticky top-0 flex items-start md:items-center justify-between md:px-24 px-4 py-4 text-whiteText bg-bgDark bg-opacity-50 backdrop-blur-sm">
+      <header className="max-w-full mx-auto sticky top-0 flex items-start md:items-center justify-between md:px-24 px-4 py-4 text-whiteText bg-bgDark bg-opacity-20 backdrop-blur-sm">
         <Link to={"/"} className="flex items-center space-x-2">
           <Logo className=" w-8 h-8 fill-bgLight" />
           <span className="text-bgLight" id="textLogo">
