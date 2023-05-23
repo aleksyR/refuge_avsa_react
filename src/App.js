@@ -7,6 +7,7 @@ import Donation from "./pages/Donation";
 import Contact from "./pages/Contact";
 import TemplateDog from "./pages/TemplateDog";
 import NotFound from "./pages/NotFound";
+import { dogAdoption } from "./datas/dogAdoption";
 
 function App() {
   return (
@@ -16,9 +17,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/apropos" element={<About />} />
           <Route path="/adoption" element={<Adoption />} />
+          <Route
+            path="/adoption/:id"
+            element={<TemplateDog dogAdoption={dogAdoption} />}
+          />
           <Route path="/donation" element={<Donation />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/templatedog" element={<TemplateDog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

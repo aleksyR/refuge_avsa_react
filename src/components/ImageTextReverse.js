@@ -3,13 +3,13 @@ import React from "react";
 const ImageTextReverse = ({ title, subTitle, text, url, alt }) => {
   return (
     <>
-      <div className="flex flex-col px-4 space-y-12 md:flex-row md:items-center md:px-24 md:space-x-40 ">
+      <div className="flex flex-col px-4 space-y-12  md:flex-row md:items-center md:px-24 md:space-x-40 ">
         <img
           src={url}
           alt={alt}
           height={420}
           width={647}
-          className="rounded-br-[250px] basis-1/2 shadow-md"
+          className="rounded-br-[250px] h-[380px] w-[auto] basis-1/2 shadow-md"
         />
         <div className="basis-1/2">
           <h2 className="font-bold uppercase text-[32px]">{title}</h2>

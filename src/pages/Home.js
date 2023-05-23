@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { dogAdoption } from "../datas/dogAdoption";
+import CardDog from "../components/CardDog";
 import ImageText from "../components/ImageText";
 import dogSleep from "../assets/images/dog_couché.jpg";
 import { ButtonDark, ButtonLight } from "../components/Button";
-import { dogAdoption } from "../datas/dogAdoption";
-import CardDog from "../components/CardDog";
 import goldenRose from "../assets/images/golden_rose.jpg";
 import { ReactComponent as HomeIcon } from "../assets/icones/home.svg";
 import { ReactComponent as ProtectIcon } from "../assets/icones/save.svg";
@@ -17,7 +17,7 @@ const Home = () => {
       <NavBar />
       <section className="bg-home-section -mt-[68px] h-[800px] px-4 md:px-24 bg-cover bg-center w-full flex flex-col justify-end md:justify-center md:items-start">
         <div className="w-full md:w-2/5 mb-8">
-          <h1 className="text-whiteText text-4xl drop-shadow-xl md:text-6xl font-bold">
+          <h1 className="text-whiteText text-4xl drop-shadow-xl md:text-6xl font-semibold">
             Aider les animaux sans abris
           </h1>
           <p className="text-whiteText drop-shadow-xl font-extralight mt-4">
@@ -25,7 +25,7 @@ const Home = () => {
             Pellentesque luctus enim et sapien faucibus ultrices. Cras accumsan
             porttitor ullamcorper.{" "}
           </p>
-          <div className="space-y-4 md:space-x-8 mt-14">
+          <div className="space-y-4 flex flex-col md:flex-row md:space-x-8 md:space-y-0 md:basis-1/2 mt-14">
             <ButtonDark title={"J'adopte"} link={"/adoption"} />
             <ButtonLight title={"Je donne"} link={"/donation"} />
           </div>
@@ -51,15 +51,18 @@ const Home = () => {
         </div>
         <div className="flex flex-col  md:space-x-4  md:flex-row md:flex-wrap">
           {dogAdoption
-            .map(({ name, shortDescription, location, profil, alt, id }) => (
-              <CardDog
-                key={id}
-                name={name}
-                shortDescription={shortDescription}
-                location={location}
-                profil={profil}
-                alt={alt}
-              />
+            .map((dog) => (
+              <>
+                <CardDog
+                  key={dog.id}
+                  profil={dog.profil}
+                  alt={dog.alt}
+                  name={dog.name}
+                  shortDescription={dog.shortDescription}
+                  location={dog.location}
+                  id={dog.id}
+                />
+              </>
             ))
             .slice(0, 3)}
         </div>

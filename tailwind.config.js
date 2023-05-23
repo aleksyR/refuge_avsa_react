@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "home-section": "url('../assets/images/bergerallemand.jpg')",
+        "adoption-banner": "url('../assets/images/jackrussell.jpg')",
       },
       colors: {
         whiteText: "#F5F5F5",

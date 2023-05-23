@@ -1,25 +1,28 @@
 import React from "react";
 import { ButtonDark } from "./Button";
 
-const CardDog = ({ name, shortDescription, location, profil, alt, id }) => {
+const CardDog = (props) => {
   return (
     <>
-      <div className="p-4 bg-whiteText rounded-lg flex-1 mb-8 flex-col justify-center lg:mb-0">
+      <div className="p-4 md:mx-2 md:my-4 bg-whiteText rounded-lg flex-1 mb-8 flex-col justify-center md:mb-0">
         <img
-          src={profil}
-          alt={alt}
-          width={"auto"}
-          height={200}
-          className="rounded-lg"
+          src={props.profil}
+          alt={props.alt}
+          width={"100%"}
+          height={"250px"}
+          className="rounded-lg w-full h-[200px] md:h-[300px] object-cover"
         />
         <div className="flex space-x-2 items-center mt-4">
           <div className="h-1 w-10 bg-greenAsset"></div>
-          <h3 className="font-bold text-2xl uppercase">{name}</h3>
+          <h3 className="font-bold text-2xl uppercase">{props.name}</h3>
         </div>
-        <span className="text-sm font-light">{location}</span>
-        <p className="font-extralight mt-4 mb-14">{shortDescription}</p>
-        <div className="flex justify-end">
-          <ButtonDark title={"J'adopte " + name} />
+        <span className="text-sm font-light">{props.location}</span>
+        <p className="font-extralight mt-4 mb-14">{props.shortDescription}</p>
+        <div className="w-full">
+          <ButtonDark
+            title={"J'adopte " + props.name}
+            link={"/adoption/" + props.id}
+          />
         </div>
       </div>
     </>
