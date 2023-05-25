@@ -17,7 +17,7 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col w-full">
       <div className=" space-y-8">
-        <div className="flex space-x-8">
+        <div className="md:flex md:space-x-8 md:space-y-0 space-y-8">
           <label className="flex flex-col basis-1/2">
             Nom
             <input
@@ -39,7 +39,7 @@ const Form = () => {
             />
           </label>
         </div>
-        <div className="flex space-x-8">
+        <div className="md:flex md:space-x-8 md:space-y-0 space-y-8">
           <label className="flex flex-col basis-1/2">
             E-mail
             <input
@@ -55,7 +55,8 @@ const Form = () => {
             <select
               name="objet"
               value={inputs.objet || ""}
-              onChange={handleChange}>
+              onChange={handleChange}
+            >
               <option value="">Faites votre choix</option>
               <option value="adoption">Adoption</option>
               <option value="donation">Donation</option>
@@ -78,7 +79,8 @@ const Form = () => {
       </div>
       <button
         type="submit"
-        className="mt-14 bg-greenAsset tracking-wider shadow-sm w-[100%] h-[56px] font-normal text-whiteText hover:bg-[#005657] uppercase text-center rounded-bl-[16px] rounded-tr-[16px]">
+        className="mt-14 bg-greenAsset tracking-wider shadow-sm w-[100%] h-[56px] font-normal text-whiteText hover:bg-[#005657] uppercase text-center rounded-bl-[16px] rounded-tr-[16px]"
+      >
         Envoyer
       </button>
     </form>

@@ -1,6 +1,6 @@
 import jackRussell from "../assets/images/jackrussell.jpg";
 import golden from "../assets/images/golden.jpg";
-import dogSleep from "../assets/images/dog_couché.jpg";
+import dogSleep from "../assets/images/dog_sleep.jpg";
 import bergerAllemand from "../assets/images/bergerallemand.jpg";
 import beagle from "../assets/images/beagle.jpg";
 import australien from "../assets/images/australien.jpg";

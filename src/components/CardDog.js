@@ -9,8 +9,8 @@ const CardDog = (props) => {
           src={props.profil}
           alt={props.alt}
           width={"100%"}
-          height={"250px"}
-          className="rounded-lg w-full h-[200px] md:h-[300px] object-cover"
+          height={"300px"}
+          className="rounded-lg w-full h-[300px] md:h-[300px] object-cover"
         />
         <div className="flex space-x-2 items-center mt-4">
           <div className="h-1 w-10 bg-greenAsset"></div>

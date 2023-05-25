@@ -4,18 +4,19 @@ import Footer from "../components/Footer";
 import { dogAdoption } from "../datas/dogAdoption";
 import CardDog from "../components/CardDog";
 import ImageText from "../components/ImageText";
-import dogSleep from "../assets/images/dog_couché.jpg";
+import dogSleep from "../assets/images/dog_sleep.jpg";
 import { ButtonDark, ButtonLight } from "../components/Button";
 import goldenRose from "../assets/images/golden_rose.jpg";
 import { ReactComponent as HomeIcon } from "../assets/icones/home.svg";
 import { ReactComponent as ProtectIcon } from "../assets/icones/save.svg";
 import { ReactComponent as DonateIcon } from "../assets/icones/donate.svg";
+import { ArrowDownwardOutlined } from "@mui/icons-material";
 
 const Home = () => {
   return (
     <>
       <NavBar />
-      <section className="bg-home-section -mt-[68px] h-[800px] px-4 md:px-24 bg-cover bg-center w-full flex flex-col justify-end md:justify-center md:items-start">
+      <section className="bg-home-section -mt-[68px] h-screen px-4 md:px-24 bg-cover bg-center w-full flex flex-col justify-end md:justify-center md:items-start">
         <div className="w-full md:w-2/5 mb-8">
           <h1 className="text-whiteText text-4xl drop-shadow-xl md:text-6xl font-semibold">
             Aider les animaux sans abris
@@ -29,6 +30,12 @@ const Home = () => {
             <ButtonDark title={"J'adopte"} link={"/adoption"} />
             <ButtonLight title={"Je donne"} link={"/donation"} />
           </div>
+        </div>
+        <div className="md:space-x-2 md:self-end md:absolute md:bottom-8 md:bg-bgDark md:bg-opacity-50  md:py-1 md:px-2 md:rounded-md">
+          <ArrowDownwardOutlined htmlColor="#f5f5f5" fontSize="small" />
+          <span className="text-whiteText uppercase text-sm">
+            Descendez pour voir plus
+          </span>
         </div>
       </section>
       <section className="mt-14 md:mt-24">
@@ -67,27 +74,39 @@ const Home = () => {
             .slice(0, 3)}
         </div>
       </section>
-      <section className="bg-bgDark flex flex-col-reverse justify-center items-center pt-20 mt-14 md:pt-0 md:mt-24 rounded-bl-[250px] rounded-tr-[250px] md:flex-row md:space-x-32 md:justify-start">
+      <section className="bg-bgDark flex flex-col-reverse  justify-center items-center pt-20 mt-14 md:pt-0 md:mt-24 md:mx-24 rounded-bl-[200px] rounded-tr-[200px] md:flex-row md:justify-start">
         <img
           src={goldenRose}
           alt="Chien type golden retriever, couleur sable avec une fleur rose dans la gueule"
-          className="h-[350px] mt-14 object-cover w-[500px] rounded-bl-[250px] md:mt-0"
+          className="h-[350px] mt-14 object-cover w-full md:w-[500px] rounded-bl-[200px] md:mt-0"
         />
-        <div className="flex flex-col space-y-14  md:flex-row md:space-y-0 md:space-x-32">
+        <div className="flex flex-col space-y-14  md:flex-row md:space-y-0 md:space-x-32 md:ml-[72px]">
           <div className="flex flex-col justify-center items-center">
-            <HomeIcon className="w-20 h-20 fill-iconColor shadow-sm" />
-            <h3 className="font-bold text-4xl text-whiteText mt-4">+ 40 ans</h3>
-            <p className="font-extralight text-whiteText">d'existances</p>
+            <HomeIcon className="w-18 h-18 fill-iconColor shadow-sm" />
+            <h3 className="font-bold text-4xl text-whiteText mt-4 text-center">
+              + 40 ans
+            </h3>
+            <p className="font-extralight text-whiteText text-center">
+              d'existances
+            </p>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <ProtectIcon className="w-20 h-20 fill-iconColor shadow-sm" />
-            <h3 className="font-bold text-4xl text-whiteText mt-4">+ 4400</h3>
-            <p className="font-extralight text-whiteText">animaux sauvés</p>
+            <ProtectIcon className="w-18 h-18 fill-iconColor shadow-sm" />
+            <h3 className="font-bold text-4xl text-whiteText mt-4 text-center">
+              + 4400
+            </h3>
+            <p className="font-extralight text-whiteText text-center">
+              animaux sauvés
+            </p>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <DonateIcon className="w-20 h-20 fill-iconColor shadow-sm" />
-            <h3 className="font-bold text-4xl text-whiteText mt-4">+ 4000</h3>
-            <p className="font-extralight text-whiteText">adoptions</p>
+            <DonateIcon className="w-18 h-18 fill-iconColor shadow-sm" />
+            <h3 className="font-bold text-4xl text-whiteText mt-4 text-center">
+              + 4000
+            </h3>
+            <p className="font-extralight text-whiteText text-center">
+              adoptions
+            </p>
           </div>
         </div>
       </section>

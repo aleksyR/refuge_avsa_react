@@ -11,7 +11,7 @@ import FemaleOutlinedIcon from "@mui/icons-material/FemaleOutlined";
 import MaleOutlinedIcon from "@mui/icons-material/MaleOutlined";
 import { ReactComponent as NoDog } from "../assets/icones/nodog.svg";
 import { ReactComponent as NoCat } from "../assets/icones/nocats.svg";
-import dogSleep from "../assets/images/dog_couché.jpg";
+import dogSleep from "../assets/images/dog_sleep.jpg";
 import ImageText from "../components/ImageText";
 import australienRefuge from "../assets/images/australien_refuge.jpg";
 
@@ -97,7 +97,7 @@ const TemplateDog = ({ dogAdoption }) => {
           url={dogSleep}
           alt={"Petit chien marron et blanc qui dort sur des planches bleu"}
         />
-        <div className="md:self-end md:mr-[280px] px-4 mt-8">
+        <div className="px-4 md:px-24 mt-8">
           <h2 className="uppercase text-[24px] mb-4 leading-8">
             Je souhaite rencontrer <br />
             ou me renseigner sur
@@ -110,25 +110,28 @@ const TemplateDog = ({ dogAdoption }) => {
         </div>
       </section>
 
-      <section className="bg-bgLight py-14 mt-14 md:mt-24 ">
-        <ImageText
-          title={"Les conditions d'adoption"}
-          url={australienRefuge}
-          alt={"Berger Australien qui sort d'un refuge avec sa laisse"}
-          text={`Pour toute adoption, nous demandons
-              des justificatifs afin de compléter le dossier
-              de l’adoptant : une pièce d’identité, un
-              justificatif de domicile original de moins
-              de 3 mois, et le certificat d’engagement et 
-              de connaissance des besoins spécifiques de 
-              l’espèce complété et signé 7 jours avant l’acquisition
-              de l’animal. Découvrez cette nouvelle formalité.
-              Nous demandons également une participation financière, 
-              couvrant les frais vétérinaires dont l’animal a bénéficié
-              lors de sa prise en charge (stérilisation, identification,
-              vaccination, etc..). Si l’animal n’est pas encore stérilisé
-              lors de l’adoption, un chèque de caution de 300€ est demandé.`}
+      <section className="bg-bgLight py-14 mt-14 md:mt-24 px-4 md:px-24 ">
+        <h2 className="font-bold uppercase text-[32px] leading-8">
+          Les conditions d'adoption
+        </h2>
+        <div className="h-1 w-20 bg-greenAsset mt-2 mb-8 md:mb-12"></div>
+        <img
+          src={australienRefuge}
+          alt="Berger Australien qui sort d'un refuge avec sa laisse"
+          className="object-cover w-full h-[400px] rounded-md mb-4"
         />
+        <p className="text-extralight max-w-[800px]">
+          Pour toute adoption, nous demandons des justificatifs afin de
+          compléter le dossier de l’adoptant : une pièce d’identité, un
+          justificatif de domicile original de moins de 3 mois, et le certificat
+          d’engagement et de connaissance des besoins spécifiques de l’espèce
+          complété et signé 7 jours avant l’acquisition de l’animal. Découvrez
+          cette nouvelle formalité. Nous demandons également une participation
+          financière, couvrant les frais vétérinaires dont l’animal a bénéficié
+          lors de sa prise en charge (stérilisation, identification,
+          vaccination, etc..). Si l’animal n’est pas encore stérilisé lors de
+          l’adoption, un chèque de caution de 300€ est demandé.
+        </p>
       </section>
       <Footer />
     </>
